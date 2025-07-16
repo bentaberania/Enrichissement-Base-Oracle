@@ -1,0 +1,56 @@
+
+SQL*Loader: Release 19.0.0.0.0 - Production on Jeu. Juin 5 16:56:34 2025
+Version 19.3.0.0.0
+
+Copyright (c) 1982, 2019, Oracle and/or its affiliates.  All rights reserved.
+
+Fichier de contrôle :   recolte.ctl
+Fichier de données :      recolte_augmente_1M.dat
+  Fichier des enregistrements refusés :     recolte.bad
+  Fichier de rebut : recolte.dsc
+ (Allouer tous les rebuts)
+
+Nombre à charger : ALL
+Nombre à ignorer : 0
+Erreurs autorisés : 10
+Tableau de variables :     10000 lignes, maximum de 10485760 octets
+Continuation :    aucune spécification
+Chemin utilisé:      Classique
+
+Table RECOLTER, chargé à partir de chaque enregistrement physique.
+Option d'insertion en vigueur pour cette table : APPEND
+option TRAILING NULLCOLS effective
+
+   Nom de colonne                  Position   Long  Type de données encadr.
+------------------------------ ---------- ----- ---- ---- ---------------------
+NPROD                               FIRST     *   |       CHARACTER            
+    NULL (non renseigné) si NPROD = BLANKS
+NVIN                                 NEXT     *   |       CHARACTER            
+    NULL (non renseigné) si NVIN = BLANKS
+ANNEE                                NEXT     *   |       CHARACTER            
+    NULL (non renseigné) si ANNEE = BLANKS
+QTE                                  NEXT     *   |       CHARACTER            
+    NULL (non renseigné) si QTE = BLANKS
+    chaîne SQL pour la colonne : "TO_NUMBER(:Qte)"
+
+
+Table RECOLTER :
+  Chargement de 1000000 Lignes effectué.
+  0 Lignes : chargement impossible dû à des erreurs de données.
+  0 Lignes : chargement impossible car échec de toutes les clauses WHEN.
+  0 Lignes : chargement impossible car tous les champs étaient non renseignés.
+
+
+Espace affecté au tableau de variables :               10320000 octets(10000 lignes)
+Octets de tampon de lecture :10485760
+
+Nombre total d'enregistrements logiques ignorés :          0
+Nombre total d'enregistrements logiques lus :       1000000
+Nombre total d'enregistrements logiques rejetés :         0
+Nombre total d'enregistrements logiques mis au rebut :        0
+
+Le début de l'exécution a été effectué sur Jeu. Juin  05 16:56:34 2025
+La fin de l'exécution a été effectuée sur Jeu. Juin  05 16:57:01 2025
+
+Temps écoulé (ELAPSED) :     00:00:27.27
+Temps processeur (CPU) :    00:00:03.68

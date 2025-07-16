@@ -1,0 +1,12 @@
+Table,Colonne,Type,Clé / Contrainte,Description
+VINR,NVIN,NUMBER(22),"PRIMARY KEY, NOT NULL",Id unique du vin
+VINR,CRU,VARCHAR2(30),,Appellation du vin
+VINR,DEGRE,FLOAT(22),NOT NULL,Degré d'alcool (en % vol)
+PRODUCTEURR,NPROD,NUMBER(22),"PRIMARY KEY, NOT NULL",Id du producteur
+PRODUCTEURR,NOM,VARCHAR2(400),,Nom du producteur
+PRODUCTEURR,PRENOM,VARCHAR2(400),,Prénom du producteur
+PRODUCTEURR,REGION,VARCHAR2(20),,Région viticole
+RECOLTER,NPROD,NUMBER(22),"PRIMARY KEY, FOREIGN KEY -> PRODUCTEURR, NOT NULL",Id du producteur
+RECOLTER,NVIN,NUMBER(22),"PRIMARY KEY, FOREIGN KEY -> VINR, NOT NULL",Id unique du vin
+RECOLTER,ANNEE,NUMBER(22),"PRIMARY KEY, NOT NULL",Année de la récolte du vin
+RECOLTER,QTE,FLOAT(22),,Quantité de vin récoltée (en litre)
